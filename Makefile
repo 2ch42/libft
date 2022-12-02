@@ -19,7 +19,8 @@ clean:
 fclean:	clean
 	rm -f $(NAME)
 
-re:	fclean all
-	$(MAKE)
+re:
+	$(MAKE)	fclean
+	$(MAKE)	all
 
 .PHONY: all clean fclean re
