@@ -9,7 +9,7 @@ OBJS_BONUS = $(SRCS_BONUS:.c=.o)
 all:	$(NAME)
 
 $(NAME):	$(OBJS)
-	ar -rc $(NAME) $(OBJS)
+	ar rcs $(NAME) $(OBJS)
 
 clean:
 	rm -f $(OBJS)
@@ -23,6 +23,6 @@ re:
 	$(MAKE)	all
 
 bonus:	$(OBJS_BONUS)
-	ar -rc $(NAME) $(OBJS_BONUS)
+	ar rcs $(NAME) $(OBJS_BONUS)
 
 .PHONY: all clean fclean re bonus
