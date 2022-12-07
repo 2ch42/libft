@@ -6,10 +6,16 @@ SRCS_BONUS = ft_lstadd_back_bonus.c ft_lstadd_front_bonus.c ft_lstclear_bonus.c 
 OBJS = $(SRCS:.c=.o)
 OBJS_BONUS = $(SRCS_BONUS:.c=.o)
 
+ifdef WITH_BONUS
+	OBJ_FILES = $(OBJS) $(OBJS_BONUS)
+else
+	OBJ_FILES = $(OBJS)
+endif
+
 all:	$(NAME)
 
-$(NAME):	$(OBJS)
-	ar rcs $(NAME) $(OBJS)
+$(NAME):	$(OBJ_FILES)
+	ar rcs $(NAME) $(OBJ_FILES)
 
 clean:
 	rm -f $(OBJS)
@@ -23,6 +29,6 @@ re:
 	$(MAKE)	all
 
 bonus:	$(OBJS_BONUS)
-	ar rcs $(NAME) $(OBJS_BONUS)
+	make WITH_BONUS=1
 
 .PHONY: all clean fclean re bonus
