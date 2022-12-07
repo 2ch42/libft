@@ -6,13 +6,13 @@
 /*   By: changhyl <changhyl@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 12:07:44 by changhyl          #+#    #+#             */
-/*   Updated: 2022/11/29 20:11:52 by changhyl         ###   ########.fr       */
+/*   Updated: 2022/12/07 13:25:27 by changhyl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_lstmap2(t_list *lst, t_list *ret_list, void *(*f)(void *),
+static int	ft_lstmap2(t_list *lst, t_list *ret_list, void *(*f)(void *),
 		void (*del)(void *))
 {
 	t_list	*ptr;
