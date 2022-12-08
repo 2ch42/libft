@@ -40,7 +40,7 @@ re:
 	$(MAKE)	fclean
 	$(MAKE)	all
 
-bonus:	$(OBJS_BONUS)
+bonus:
 	make WITH_BONUS=1
 
 .PHONY: all clean fclean re bonus
