@@ -57,11 +57,6 @@ static void	print_result(int nb, int fd)
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	int		length;
-	int		div_val;
-
-	length = how_long(n);
-	div_val = make_divide(how_long(n));
 	if (n == 0)
 	{
 		write(fd, "0", 1);
